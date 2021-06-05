@@ -1,8 +1,7 @@
 const express = require('express');
 const serverless = require ('serverless-http');
 var usersRouter = require('./routes/users');
-var indexRouter = require('./routes/index');
-
+var gruppoRouter = require('./routes/gruppo');
 
 const app = express();
 const router = express.Router();
@@ -20,7 +19,7 @@ app.use(bodyParser.json());
 
  //E' necessario usare per tutte le route il prefisso /.netlify/functions
  app.use('/.netlify/functions/api/users', usersRouter);
- app.use('/.netlify/functions/api/indes', indexRouter);
+ app.use('/.netlify/functions/api/gruppo', gruppoRouter);
 
  //NB!
  //NON è necessario avviare il server perchè stiamo creando una lambda function
