@@ -27,11 +27,11 @@ app.use(new cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.use('/', indexRouter);
-app.use('/register', registerRouter);
-app.use('/login', loginRouter);
-app.use('/gruppo', gruppoRouter);
-app.use('/chat', chatRouter);
+app.use('/.netlify/functions/api/index', indexRouter);
+app.use('/.netlify/functions/api/register', registerRouter);
+app.use('/.netlify/functions/api/login', loginRouter);
+app.use('/.netlify/functions/api/gruppo', gruppoRouter);
+app.use('/.netlify/functions/api/chat', chatRouter);
 
 module.exports = app;
 module.exports.handler= serverless(app);  //Qui è dove esportiamo le nostre funzioni per netlify
