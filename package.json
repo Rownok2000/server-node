@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Rownok2000/server-node#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.9",
